@@ -1,4 +1,4 @@
-#JS ninjas backend task
+# Ninjas back
 
 <h2>Scripts</h2>
 <h3>npm run dev</h3>
