@@ -15,7 +15,7 @@
 <li>originDescription: description of heroes' origin (he was born Kal-El on the planet Krypton, before being rocketed to
 Earth as an infant by his scientist father Jor-El, moments before Krypton's destruction...). String.</li>
 <li>superpowers: list of powers, takes an array of strings. Each power should be a separate item in the array (solar energy absorption and healing factor, solar flare and heat vision,
-solar invulnerability, flight...). String[].</li>
+solar invulnerability, flight...). String.</li>
 <li>
 catchPhrase: catchphrase related to hero (“Look, up in the sky, it's a bird, it's a plane, it's Superman!”). String.
 </li>

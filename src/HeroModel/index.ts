@@ -4,7 +4,7 @@ type Hero = {
   nickname: string;
   realName?: string;
   originDescription?: string;
-  superpowers?: string[];
+  superpowers?: string;
   catchPhrase?: string;
   images: string[];
 };
@@ -31,7 +31,7 @@ const heroSchema = new Schema<Hero>({
   nickname: { type: String, required: true },
   realName: String,
   originDescription: String,
-  superpowers: [String],
+  superpowers: String,
   catchPhrase: String,
   images: { type: [String], required: true },
 });
