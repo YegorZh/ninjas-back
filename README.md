@@ -36,3 +36,6 @@ images: set of images, takes an array of strings that contain image urls. String
 <li>PATCH: updates one hero by _id</li>
 <li>DELETE: deletes one hero by _id</li>
 </ul>
+<hr>
+P.S.
+Frontend can be found <a href="https://github.com/YegorZh/Superheroes">here</a>
