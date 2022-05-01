@@ -5,7 +5,7 @@ import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 const cors = require('cors');
 import HeroModel from './HeroModel';
-import { validateBody } from './middleware';
+import { validateBody, validateId } from './middleware';
 import { mongoError } from './utility';
 
 const app = express();
@@ -28,17 +28,17 @@ app
 
 app
   .route('/heroes/:id')
-  .get((req, res) => {
+  .get(validateId, (req, res) => {
     HeroModel.findById(req.params.id)
       .then((result) => res.send(result))
       .catch((error) => mongoError(error, res));
   })
-  .patch((req, res) => {
+  .patch(validateId, (req, res) => {
     HeroModel.updateOne({ _id: req.params.id }, { ...req.body })
       .then((result) => res.send(result))
       .catch((err) => mongoError(err, res));
   })
-  .delete((req, res) => {
+  .delete(validateId, (req, res) => {
     HeroModel.deleteOne({ _id: req.params.id })
       .then((result) => res.send(result))
       .catch((err) => mongoError(err, res));
